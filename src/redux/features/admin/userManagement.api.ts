@@ -1,7 +1,8 @@
-import { TQueryParam, TResponseRedux, TStudent } from '../../../types';
+import { TQueryParam, TResponseRedux, TStudent } from "../../../types";
 
-import { baseApi } from '../../api/baseApi';
+import { baseApi } from "../../api/baseApi";
 
+// usermanagement api endpoints with baseApi
 const userManagementApi = baseApi.injectEndpoints({
   endpoints: (builder) => ({
     getAllStudents: builder.query({
@@ -16,8 +17,8 @@ const userManagementApi = baseApi.injectEndpoints({
         }
 
         return {
-          url: '/students',
-          method: 'GET',
+          url: "/students",
+          method: "GET",
           params: params,
         };
       },
@@ -40,8 +41,8 @@ const userManagementApi = baseApi.injectEndpoints({
         }
 
         return {
-          url: '/faculties',
-          method: 'GET',
+          url: "/faculties",
+          method: "GET",
           params: params,
         };
       },
@@ -54,8 +55,8 @@ const userManagementApi = baseApi.injectEndpoints({
     }),
     addStudent: builder.mutation({
       query: (data) => ({
-        url: '/users/create-student',
-        method: 'POST',
+        url: "/users/create-student",
+        method: "POST",
         body: data,
       }),
     }),
